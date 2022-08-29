@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "eefefef-c0ca"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "eefefef-c0ca"
+  template:
+    metadata:
+      labels:
+        app: "eefefef-c0ca"
+    spec:
+      containers:
+        - name: "eefefef-c0ca"
+          image: "eefefefregistry.azurecr.io/eefefef"
+          ports:
+          - containerPort: 80
